@@ -59,10 +59,13 @@ compile and burn the code to Arduino Nano, onbroad LED (connrect to D13, ATmega1
 ### references:
 how to toggle port pin, https://hackaday.com/2011/07/09/hardware-xor-for-output-pins-on-avr-microcontrollers/  
 how to define asm name to call, https://stackoverflow.com/questions/16270732/gcc-linking-symbol-name-mangling-with-c-and-assembler-files  
-how to Mixing Assembly and C with AVRGCC,  Atmel sold to Microchip and re-branded in year 2016, some Atmel datasheet provide by Microchip today, still Atmel brand name,  
-http://ww1.microchip.com/downloads/en/appnotes/doc42055.pdf  
-https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2012/xg46_jy363/xg46_jy363/Reference/Mixing%20C%20and%20assembly%20language%20programs.pdf  
-http://www.ethernut.de/pdf/GCCAVRInlAsmCB.pdf  
+how to Mixing Assembly and C with AVRGCC,  Atmel sold to Microchip and re-branded in year 2016, some Atmel datasheet provide by Microchip today, still Atmel brand name,   
+http://ww1.microchip.com/downloads/en/appnotes/doc42055.pdf, (local copy)  
+  
+https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2012/xg46_jy363/xg46_jy363/Reference/Mixing%20C%20and%20assembly%20language%20programs.pdf  (local copy) 
+  
+http://www.ethernut.de/pdf/GCCAVRInlAsmCB.pdf  (local copy)  
+  
 
 
 
