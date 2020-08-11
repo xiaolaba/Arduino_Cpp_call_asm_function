@@ -15,6 +15,16 @@ compiler : Arduino IDE 1.8.12 is used.
 hardward: Arduino Nano, onbroad LED is connected to PB5 of ATmega8/168/328p, or arduino Nano pin# D13  
 
 ### Two funcitons designed with test.S, uses LED_TOOGLE as example to describe the design flow,  
+  
+  
+in test.S,  
+// The following two lines must be included in every assembly language  
+// function. They are needed to allow the use of the port names and IN and OUT instructions    
+#define _SFR_ASM_COMPAT 1  
+#define __SFR_OFFSET 0  
+  
+    
+  
 
 in test.S, define the name of fuction, LED_TOGGLE,  
 ```  
