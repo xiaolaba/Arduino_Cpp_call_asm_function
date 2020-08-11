@@ -5,9 +5,9 @@ Arduino IDE 1.8.12 skectch is named *.ino, considered C or C++ of programming so
 
 build subrotuine, named as test.S, source code of avr assembler language for avr-gcc.  
 
-### example and how to build/compile these two source code, Arduino IDE 1.8.12 is used.  
-
-hardward: Arduino Nano, onbroad LED is connected to PB5 of ATmega8/168/328p, or arduino pin# D13  
+### example and how to build/compile these two source code,
+compiler : Arduino IDE 1.8.12 is used.  
+hardward: Arduino Nano, onbroad LED is connected to PB5 of ATmega8/168/328p, or arduino Nano pin# D13  
 
 ### Two funcitons designed with test.S, uses LED_TOOGLE as example to describe the design flow,  
 
@@ -55,4 +55,12 @@ the actual calling our ASM function,
 ### test result  
 compile and burn the code to Arduino Nano, onbroad LED (connrect to D13, ATmega168 port pin name is PB5) is blinking, it is same effect of Arduino blink example, but -5x is code size. ASM has unique feature that more capable & easier then C or C++ on specific jobs, for example, some algorithm design. This is jsut an example of how to build, nothing to do specific algorithm design.
 
+
+### references:
+how to toggle port pin, https://hackaday.com/2011/07/09/hardware-xor-for-output-pins-on-avr-microcontrollers/  
+how to define asm name to call, https://stackoverflow.com/questions/16270732/gcc-linking-symbol-name-mangling-with-c-and-assembler-files  
+how to asm/c,  
+http://ww1.microchip.com/downloads/en/appnotes/doc42055.pdf  
+https://people.ece.cornell.edu/land/courses/ece4760/FinalProjects/s2012/xg46_jy363/xg46_jy363/Reference/Mixing%20C%20and%20assembly%20language%20programs.pdf  
+http://www.ethernut.de/pdf/GCCAVRInlAsmCB.pdf  
 
