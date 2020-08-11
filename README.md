@@ -1,15 +1,15 @@
 # Arduino_Cpp_call_asm_function  
-For AVR MCU, Framework and learning, build assembler subroutine, call from C++, Arduino IDE is C++  
+For AVR MCU, Framework and learning, build assembler subroutine, call from C++, Arduino IDE is C++.  
 
-Arduino IDE 1.8.12 is C++, skectch is named *.ino, considered C or C++ of programming source code, underneath is avr-gcc.  
+Arduino IDE 1.8.12 skectch is named *.ino, considered C or C++ of programming source code, under layer is avr-gcc.  
 
-build subrotuine, named as test.S, avr assembler language for avr-gcc.  
+build subrotuine, named as test.S, source code of avr assembler language for avr-gcc.  
 
-example and how to build/compile these two source code, Arduino IDE 1.8.12 is used.  
+### example and how to build/compile these two source code, Arduino IDE 1.8.12 is used.  
 
-hardward used, Arduino Nano, onbroad LED is connected to PB5 of ATmega8/168/328p, or arduino pin# D13  
+hardward: Arduino Nano, onbroad LED is connected to PB5 of ATmega8/168/328p, or arduino pin# D13  
 
-Two funcitons designed with test.S, uses LED_TOOGLE as example to describe the design flow,  
+### Two funcitons designed with test.S, uses LED_TOOGLE as example to describe the design flow,  
 
 in test.S, define the name of fuction, LED_TOGGLE,  
 ```  
@@ -25,9 +25,12 @@ LED_TOGGLE: // start of our function
   
 ```  
 
-in testC_callASM.ino, define the name to call our function, it is also saying "fuction prototype", key to success,   
+### C++ source code, testC_callASM.ino, fuction prototype & key to success,   
+define the name to call our function it is also saying "fuction prototype",
+  
 extern "C" {your_fuction_prototype} for C++ compiler  
 extern your_fuction_prototype; // for C version  
+  
 ```  
 //Assembler function is external, avr-gcc uses register r24 to pass argument or parameter when calling  
   
