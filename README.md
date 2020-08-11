@@ -23,6 +23,8 @@ in test.S,
 // function. They are needed to allow the use of the port names and IN and OUT instructions    
 #define _SFR_ASM_COMPAT 1  
 #define __SFR_OFFSET 0  
+
+#include <avr/io.h> // avr io register names, PORTB & PB5 is used, named & defined here
 ```  
     
   
