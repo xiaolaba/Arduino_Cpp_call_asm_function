@@ -17,7 +17,7 @@ in test.S, define the name of fuction, LED_TOGGLE,
   
 ```  
 
-in test.S, the actual function body, 
+the actual function body, 
 by defualt, avr-gcc assembler subroutine, r0, r31, r18-r27, assembler rotine can be used freely,
 ```  
 LED_TOGGLE: // start of our function  
@@ -26,8 +26,9 @@ LED_TOGGLE: // start of our function
   
 ```  
 
-### C++ source code, testC_callASM.ino, fuction prototype & key to success,   
-define the name to call our function it is also saying "fuction prototype",
+### C++ source code, testC_callASM.ino, fuction prototype & key to success,  
+  
+define the name before to call your function, it is saying "function prototype" also,
   
 extern "C" {your_fuction_prototype} for C++ compiler  
 extern your_fuction_prototype; // for C version  
@@ -45,13 +46,13 @@ extern void LED_TOGGLE(void); // for C version
 ```  
   
   
-in testC_callASM.ino, call our ASM function  
+the actual calling our ASM function,  
 ```  
   //LEDFLASH(value);  // parameter pass to ASM routine, r24 used   
   LED_TOGGLE(); // call ASM subroutine, no parameter  
 ```  
   
 ### test result  
-compile and burn the code to Arduino Nano, onbroad LED (connrect to D13, ATmega168 port pin name is PB5) is blinking.  
+compile and burn the code to Arduino Nano, onbroad LED (connrect to D13, ATmega168 port pin name is PB5) is blinking, it is same effect of Arduino blink example, but -5x is code size. ASM has unique feature that more capable & easier then C or C++ on specific jobs, for example, some algorithm design. This is jsut an example of how to build, nothing to do specific algorithm design.
 
 
