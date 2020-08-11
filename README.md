@@ -17,7 +17,8 @@ in test.S, define the name of fuction, LED_TOGGLE,
   
 ```  
 
-in test.S, the actual function body,  
+in test.S, the actual function body, 
+by defualt, avr-gcc assembler subroutine, r0, r31, r18-r27, assembler rotine can be used freely,
 ```  
 LED_TOGGLE: // start of our function  
   (your_code) // any code  
@@ -44,7 +45,7 @@ extern void LED_TOGGLE(void); // for C version
 ```  
   
   
-in testC_callASM.ino, call our ASM function,  
+in testC_callASM.ino, call our ASM function  
 ```  
   //LEDFLASH(value);  // parameter pass to ASM routine, r24 used   
   LED_TOGGLE(); // call ASM subroutine, no parameter  
