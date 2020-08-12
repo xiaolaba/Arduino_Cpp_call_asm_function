@@ -50,7 +50,7 @@ define the name before to call your function, it is saying "function prototype" 
   
 extern "C" {your_fuction_prototype} for C++ compiler  
 extern your_fuction_prototype; // for C version  
-  
+
 ```  
 //Assembler function is external, avr-gcc uses register r24 to pass argument or parameter when calling  
   
@@ -62,7 +62,18 @@ extern "C" {
 // function prototype for C compiler  
 extern void LED_TOGGLE(void); // for C version  
 ```  
-  
+
+
+A goalble variable for C and ASM
+```
+// Assembler function is external, avr-gcc uses register r24 to pass argument or parameter when calling
+// Global variable accessible by assembler code and C code
+uint8_t value;
+
+```
+
+
+
   
 the actual calling our ASM function,  
 ```  
